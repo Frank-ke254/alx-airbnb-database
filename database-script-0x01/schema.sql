@@ -10,7 +10,7 @@ create table users (
 );
 
 create table properties (
-    property_id primary key UUID,
+    property_id UUID primary key,
     host_id UUID,
     name varchar(50) not null,
     description text not null,
@@ -21,7 +21,7 @@ create table properties (
 );
 
 create table bookings (
-    booking_id primary key UUID,
+    booking_id UUID primary key,
     property_id UUID,
     user_id UUID,
     start_date date not null,
@@ -34,7 +34,7 @@ create table bookings (
 );
 
 create table payment (
-    payment_id primary key UUID,
+    payment_id UUID primary key,
     booking_id UUID,
     amount decimal(10,2) not null,
     payment_date timestamp default current_timestamp,
