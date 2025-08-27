@@ -17,6 +17,7 @@ create table properties (
     location varchar(50) not null,
     pricepernight decimal(10, 2) not null,
     created_at timestamp default current_timestamp,
+    updated_at timestamp default current_timestamp
     foreign key (host_id) references users(user_id)
 );
 
