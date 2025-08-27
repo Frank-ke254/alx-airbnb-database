@@ -20,7 +20,7 @@ INSERT INTO payment (payment_id, booking_id, amount, payment_method) VALUES
 
 INSERT INTO reviews (review_id, property_id, user_id, rating, comment) VALUES
 (gen_random_uuid(), (SELECT property_id FROM properties WHERE = 'Paradise'), (SELECT user_id FROM users WHERE email = 'wambui@gmail.com'), 5, 'I had a really nice stay, I will certainly come back.');
-(gen_random_uuid(), (SELECT property_id FROM properties WHERE = 'Villa Lodge'), (SELECT user_id FROM users WHERE email = 'jade@gmail.com'), 4, 'I had a really nice sta');
+(gen_random_uuid(), (SELECT property_id FROM properties WHERE = 'Villa Lodge'), (SELECT user_id FROM users WHERE email = 'jade@gmail.com'), 4, 'I had a really nice stay');
 
 INSERT INTO messages (message_id, sender_id, recipient_id, message_body) VALUES
 (gen_random_uuid(), (SELECT user_id FROM users WHERE = 'wambui@gmail.com'), (SELECT user_id FROM users WHERE email = 'frank@gmail.com'), 'Good morning Frank, I appreciate you for having me. The experience was breath-taking.');
