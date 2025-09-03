@@ -13,6 +13,12 @@ LEFT JOIN Reviews
 -- FULL OUTER JOIN 
 SELECT * 
 FROM Users
+FULL OUTER JOIN Bookings
+    ON Users.user_id = Bookings.user_id;
+
+-- alternative for full outer join
+SELECT * 
+FROM Users
 UNION
 SELECT *
 FROM Bookings
