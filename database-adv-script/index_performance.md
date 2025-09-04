@@ -25,6 +25,10 @@
       ON Bookings.user_id = Users.user_id
     WHERE Users.email = 'frank@gmail.com';
   ```
+Results:
+  ```sql
+  3	3	11:04:12	EXPLAIN    SELECT *    FROM Bookings     JOIN users       ON Bookings.user_id = Users.user_id    WHERE Users.email = 'frank@gmail.com'	2 row(s) returned	0.047 sec / 0.000 sec
+```         
 # After indexing:
 
 ```sql
@@ -35,4 +39,13 @@
       ON Bookings.user_id = Users.user_id
     WHERE Users.email = 'frank@gmail.com';
   ```
+Results:
+  ``` sql
+ 3	9	11:08:24	EXPLAIN
+   SELECT *
+   FROM Bookings 
+   JOIN users 
+     ON Bookings.user_id = Users.user_id
+   WHERE Users.email = 'frank@gmail.com'	2 row(s) returned	0.000 sec / 0.000 sec
+```
 
