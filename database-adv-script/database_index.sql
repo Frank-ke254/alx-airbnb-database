@@ -10,3 +10,10 @@ CREATE INDEX idx_bookings_property_id ON Bookings(property_id);
 -- Properties table
 CREATE INDEX idx_properties_property_id ON Properties(property_id);
 CREATE INDEX idx_properties_host_id ON Properties(host_id);
+
+EXPLAIN ANALYZE
+SELECT *
+FROM Bookings 
+JOIN users 
+  ON Bookings.user_id = Users.user_id
+WHERE Users.email = 'frank@gmail.com';
