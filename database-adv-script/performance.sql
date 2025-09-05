@@ -1,3 +1,4 @@
+-- Before Refactoring
 SELECT 
     bk.booking_id,
     bk.start_date,
@@ -17,7 +18,7 @@ SELECT
 FROM Bookings bk
 JOIN Users u ON bk.user_id = u.user_id
 JOIN Properties pr ON bk.property_id = pr.property_id
-LEFT JOIN Payments py ON bk.booking_id = py.booking_id
+LEFT JOIN Payment py ON bk.booking_id = py.booking_id
 WHERE bk.status = 'confirmed'
   AND pr.location = 'Kitengela';
 
@@ -42,7 +43,7 @@ SELECT
 FROM Bookings bk
 JOIN Users u ON bk.user_id = u.user_id
 JOIN Properties pr ON bk.property_id = pr.property_id
-LEFT JOIN Payments py ON bk.booking_id = py.booking_id
+LEFT JOIN Payment py ON bk.booking_id = py.booking_id
 WHERE bk.status = 'confirmed'
   AND pr.location = 'Kitengela';
 
@@ -59,6 +60,6 @@ SELECT
 FROM Bookings bk
 JOIN Users u ON bk.user_id = u.user_id
 JOIN Properties pr ON bk.property_id = pr.property_id
-LEFT JOIN Payments py ON bk.booking_id = py.booking_id
+LEFT JOIN Payment py ON bk.booking_id = py.booking_id
 WHERE bk.status = 'confirmed'
   AND pr.location = 'Kitengela';
