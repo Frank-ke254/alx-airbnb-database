@@ -18,7 +18,7 @@
 # Before indexing:
 
   ```sql
-    EXPLAIN
+    EXPLAIN ANALYZE
     SELECT *
     FROM Bookings 
     JOIN users 
@@ -32,7 +32,7 @@ Results:
 # After indexing:
 
 ```sql
-    EXPLAIN
+    EXPLAIN ANALYZE
     SELECT *
     FROM Bookings 
     JOIN users 
